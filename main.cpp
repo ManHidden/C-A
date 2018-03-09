@@ -1,14 +1,22 @@
 #include <iostream>
-#include <player.h>
+#include "player.h"
+using namespace std;
+
 using namespace std;
 
 int main(){
 
     cout << "Hello world!\n" << endl;
     cout << "?\n" << endl;
-    Player OMG(100, 100, 50, 50);
+    Player OMG(100.0, 100.0, 50.0, 50.0);
 
-    cout << "¯ycie: " << Player.getPlayerHealth() << "¯ycie max: " << Player.getPlayerHealthMax() << "Mana: " << Player.getPlayerMana() << "Mana max: " << Player.getPlayerManaMax() << endl;
+    cout << "Zycie: " << OMG.getPlayerHealth() << " /Zycie max: " << OMG.getPlayerHealthMax() << " /Mana: " << OMG.getPlayerMana() << " /Mana max: " << OMG.getPlayerManaMax() << endl;
+
+    OMG.setHealth(30, OMG.getPlayerHealth());
+    OMG.setMana(40, OMG.getPlayerManaMax());
+
+    cout << "\nZycie: " << OMG.getPlayerHealth() << " /Zycie max: " << OMG.getPlayerHealthMax() << " /Mana: " << OMG.getPlayerMana() << " /Mana max: " << OMG.getPlayerManaMax() << endl;
+
 
     return 0;
 
